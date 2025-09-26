@@ -1,0 +1,25 @@
+.button{
+    border: none;
+    text-align: center;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 1rem;
+    transition: all 1000ms ease-in-out;
+    cursor: pointer;
+}
+.green{
+    color: var(--gray-700);
+    background: var(--primary);
+}
+.green:hover{
+    background: #063d2b;
+    color: var(--gray-100);
+}
+.red{
+    background:  var(--red-color);
+    color: var(--gray-100);
+}
+
+.red:hover{
+    background: var(--error);
+}

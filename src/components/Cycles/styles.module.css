@@ -1,0 +1,32 @@
+
+.cycles {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.cyclesDots {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.cyclesDot {
+  margin-top: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: black; /* cor padrão visível */
+}
+
+.workTime {
+  background-color: rgb(240, 161, 13); /* tempo de trabalho */
+}
+
+.shortBreakTime {
+  background-color: #0da170; /* pausa curta */
+}
+
+.longBreakTime {
+  background-color: rgb(15, 124, 197); /* pausa longa */
+}

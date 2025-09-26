@@ -1,0 +1,151 @@
+.buttonContainer button {
+  max-width: 5rem;
+  margin: 0 0 0 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary);
+}
+
+.buttonContainer button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.buttonContainer button:active {
+  transform: translateY(0);
+}
+
+.buttonContainer button svg {
+  width: 2rem;
+  height: 2rem;
+  filter: brightness(1.2);
+}
+
+.responsiveTable {
+  overflow-x: auto;
+  border-radius: 1.2rem;
+  background: var(--gray-800);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--gray-700);
+}
+
+.responsiveTable table {
+  width: 100%;
+  min-width: 64rem;
+  font-size: 1.6rem;
+  border-collapse: collapse;
+}
+
+.responsiveTable th {
+  background: linear-gradient(135deg, var(--gray-600), var(--gray-650));
+  color: var(--gray-100);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.responsiveTable th::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gray-400), transparent);
+}
+
+.responsiveTable td {
+  background-color: var(--gray-800);
+  transition: all 0.3s ease;
+}
+
+.responsiveTable th,
+.responsiveTable td {
+  width: 25%;
+  border-bottom: 1px solid var(--gray-750);
+  text-align: left;
+  padding: 1.6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Efeito hover nas linhas */
+.responsiveTable tbody tr:hover td {
+  background-color: var(--gray-750);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Primeira e última coluna com bordas arredondadas visuais */
+.responsiveTable th:first-child,
+.responsiveTable td:first-child {
+  padding-left: 2.4rem;
+}
+
+.responsiveTable th:last-child,
+.responsiveTable td:last-child {
+  padding-right: 2.4rem;
+}
+
+/* Scrollbar customizada */
+.responsiveTable::-webkit-scrollbar {
+  height: 8px;
+}
+
+.responsiveTable::-webkit-scrollbar-track {
+  background: var(--gray-700);
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.responsiveTable::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--gray-500), var(--gray-600));
+  border-radius: 4px;
+}
+
+.responsiveTable::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--gray-400), var(--gray-500));
+}
+
+/* Efeito de brilho sutil no header */
+.responsiveTable th {
+  position: relative;
+  overflow: hidden;
+}
+
+.responsiveTable th::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    50deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.responsiveTable th:hover::before {
+  opacity: 1;
+  animation: shine 1.5s ease-in-out;
+}
+
+
+@keyframes shine {
+  0% {
+    transform: rotate(50deg) translateX(-100%);
+  }
+  100% {
+    transform: rotate(50deg) translateX(100%);
+  }
+}
